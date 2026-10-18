@@ -1,0 +1,31 @@
+{
+  "name": "avisynth-textmate",
+  "publisher": "local",
+  "displayName": "AviSynth Syntax Highlighting",
+  "description": "Syntax highlighting for AviSynth",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purfview/avisynth-textmate.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "avisynth",
+        "extensions": [".avs", ".avsi"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "avisynth",
+        "scopeName": "source.avisynth",
+        "path": "./syntaxes/avisynth.tmLanguage.json"
+      }
+    ]
+  }
+}

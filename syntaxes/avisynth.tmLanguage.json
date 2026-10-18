@@ -1,0 +1,126 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "AviSynth",
+  "scopeName": "source.avisynth",
+  "fileTypes": [
+    "avs",
+    "avsi"
+  ],
+  "patterns": [
+    {
+      "name": "comment.line.number-sign.avisynth",
+      "match": "#.*$"
+    },
+    {
+      "name": "comment.block.avisynth",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "string.quoted.multi.avisynth",
+      "begin": "\"\"\"",
+      "end": "\"\"\""
+    },
+    {
+      "name": "string.quoted.double.avisynth",
+      "begin": "(?i)\\b(e)(\")",
+      "beginCaptures": {
+        "1": {
+          "name": "storage.type.string.avisynth"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.avisynth"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.avisynth"
+        }
+      },
+      "patterns": [
+        {
+          "name": "constant.character.escape.avisynth",
+          "match": "\\\\(?:[nrt0af\\\\\"\\'bv]|.)"
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.double.avisynth",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.avisynth"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.avisynth"
+        }
+      }
+    },
+    {
+      "name": "comment.block.avisynth",
+      "begin": "(?i)\\b__END__\\b",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.control.avisynth"
+        }
+      },
+      "end": "(?!)"
+    },
+    {
+      "name": "keyword.control.avisynth",
+      "match": "(?i)\\b(?:function|global|return|try|catch|if|else|while|for|break|continue)\\b"
+    },
+    {
+      "match": "(?i)(?<=[(,])(?:\\s|\\\\)*?(clip|int|long|float|double|string|bool|func|array|val)\\b(?=\\s+(?:[A-Za-z_][A-Za-z0-9_]*|\"[^\"]*\"))",
+      "captures": {
+        "1": {
+          "name": "storage.type.avisynth"
+        }
+      }
+    },
+    {
+      "name": "constant.language.boolean.avisynth",
+      "match": "(?i)\\b(?:true|false|yes|no)\\b"
+    },
+    {
+      "name": "variable.language.avisynth",
+      "match": "(?i)\\blast\\b"
+    },
+    {
+      "name": "entity.name.function.avisynth",
+      "match": "(?<=\\.)[A-Za-z_][A-Za-z0-9_]*"
+    },
+    {
+      "name": "entity.name.function.avisynth",
+      "match": "(?i)\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*\\()"
+    },
+    {
+      "name": "constant.numeric.hex.avisynth",
+      "match": "(?i)\\$[0-9a-f]+l?\\b"
+    },
+    {
+      "name": "constant.numeric.float.avisynth",
+      "match": "(?<![\\w.])(?:[0-9]+\\.[0-9]*|\\.[0-9]+)(?![\\w.])"
+    },
+    {
+      "name": "constant.numeric.integer.avisynth",
+      "match": "(?<![\\w.])[0-9]+(?![\\w.])"
+    },
+    {
+      "name": "keyword.operator.avisynth",
+      "match": "(?:\\+\\+|==|!=|<>|<=|>=|&&|\\|\\||\\?:|[+\\-*/%<>!?:=])"
+    },
+    {
+      "name": "punctuation.avisynth",
+      "match": "[().,;\\[\\]{}\\\\]"
+    },
+    {
+      "name": "variable.other.avisynth",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+    }
+  ]
+}
