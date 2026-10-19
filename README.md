@@ -1,3 +1,6 @@
+<img width="971" height="534" alt="xxxCapture23" src="https://github.com/user-attachments/assets/aa262bdf-12d9-4801-beb1-771d0ec524d7" />
+
+
 # AviSynth TextMate Highlighter
 
 AviSynth syntax highlighting using a TextMate grammar.   
