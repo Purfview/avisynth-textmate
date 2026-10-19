@@ -5,7 +5,7 @@ avisynth-textmate targets TextMate-compatible editors and provides the grammar m
 It's also intended to be usable as an upstream grammar for GitHub Linguist.   
 A prebuilt VS Code extension can be downloaded from the [Releases](https://github.com/Purfview/avisynth-textmate/releases) page.
 
-The grammar is based on the [AviSynth+ syntax documentation](https://avisynthplus.readthedocs.io/en/master/avisynthdoc/syntax/syntax_sections.html).    
+The grammar is based on the [AviSynth syntax documentation](https://avisynthplus.readthedocs.io/en/master/avisynthdoc/syntax/syntax_sections.html).    
 The AviSynth+ source code is at [AviSynth/AviSynthPlus](https://github.com/AviSynth/AviSynthPlus).
 
 
