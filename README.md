@@ -5,7 +5,7 @@
 
 AviSynth syntax highlighting using a TextMate grammar.   
 avisynth-textmate targets TextMate-compatible editors and provides the grammar metadata for [Visual Studio Code](https://code.visualstudio.com).   
-It's also intended to be usable as an upstream grammar for GitHub Linguist.   
+It's also intended to be usable as an upstream grammar for [GitHub Linguist](https://github.com/github-linguist/linguist).   
 A prebuilt VS Code extension can be downloaded from the [Releases](https://github.com/Purfview/avisynth-textmate/releases) page.
 
 The grammar is based on the [AviSynth syntax documentation](https://avisynthplus.readthedocs.io/en/master/avisynthdoc/syntax/syntax_sections.html).    
